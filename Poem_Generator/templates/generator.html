@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Article Generator</title >
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/form_upload.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-upload" method=post enctype="multipart/form-data">
+      <h1 class="h3 mb-3 font-weight-normal">簡媜散文生成器</h1>
+       <h3 class="h3 mb-3 font-weight-normal">使用說明:因素材為簡體字版本，故輸入需要為簡體字，底下為部分簡體字可當範例輸入</h3>
+       <h3 class="h3 mb-3 font-weight-normal">1.这时令，开天较迟，眼前身后皆是浓雾，到了山腰，回身已摸不清村落在哪儿了. </h3> 
+       <h3 class="h3 mb-3 font-weight-normal">2.后花园鱼池畔，搭着的一面网墙上，落葵任劳任怨爬出半壁江山， </h3>
+      <h3 class="h3 mb-3 font-weight-normal">3. 而像我一样，又拎着肉体凡胎回到世间的，便注走接受绝美诅咒，永远被孤寂缠身了</h3> 
+      <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">載入模型</button> -->
+      <h3>輸入字串</h3>
+      <input id="string" name="string" class="form-control" required>
+      <h3>輸出文章長度(1~2000)</h3>
+      <input id="length" name="length" class="form-control" require>
+      <h3>輸入隨機度temperature（0~1）</h3> 
+      <input id="temperature" name="temperature" class="form-control" required>
+  
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Generate</button>
+      <br>
+      {% if output %} 
+        <h3 class="h3 mb-3 font-weight-normal">生成文章:{{output}}</h3>
+      {% endif %}
+    </form>
+  </body>
+</html>
